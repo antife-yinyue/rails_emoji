@@ -4,13 +4,13 @@
 
 ## Installation
 
-Download the [rails_emoji-1.0.gem](https://github.com/jsw0528/rails_emoji/blob/master/rails_emoji-1.0.gem), then `$ gem install ./rails_emoji-1.0.gem --no-ri --no-rdoc`.
+* Add to your Gemfile: `gem "rails_emoji"`, then: `$ bundle`.
+
+* Or, download the [rails_emoji-1.1.gem](https://github.com/jsw0528/rails_emoji/blob/master/rails_emoji-1.1.gem), then `$ gem install ./rails_emoji-1.1.gem --no-ri --no-rdoc`.
 
 ## Usage
 
 ```ruby
-require 'rails_emoji'
-
 ":smile:".emoji_to_html
 # output: "<img src="/assets/emojis/smile.png" width="20" height="20" title=":smile:" alt=":smile:" class="emoji" />"
 

@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
   s.files    = Dir["{lib,vendor}/**/*"] + %w{README.md}
   s.homepage = "https://github.com/jsw0528/rails_emoji"
-  s.authors  = ["wǒ_is神仙(http://MrZhang.me/)"]
-  s.summary  = "Emoji for Rails"
+  s.authors  = ["Jay-Jay.Zhang (http://MrZhang.me/)"]
+  s.summary  = "Emoji for Ruby on Rails"
 
   s.add_dependency "rails", ">= 3.1.0"
 end

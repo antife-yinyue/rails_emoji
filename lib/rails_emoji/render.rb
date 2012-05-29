@@ -9,7 +9,7 @@ module RailsEmoji
       class_name = options[:class] || "emoji"
 
       # Replace
-      text.gsub(/:([^:]+):/) do |emoji|
+      text.gsub(/:([a-z0-9_\-\+]+):/) do |emoji|
         emoji_code = emoji
         emoji = emoji_code.gsub(":", "")
 
