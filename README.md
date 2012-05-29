@@ -6,7 +6,7 @@
 
 * Add to your Gemfile: `gem 'rails_emoji', '~> 1.1'`, then: `$ bundle`.
 
-* Or, download the [rails_emoji-1.1.gem](https://github.com/jsw0528/rails_emoji/blob/master/rails_emoji-1.1.gem), then `$ gem install ./rails_emoji-1.1.gem --no-ri --no-rdoc`.
+* Or, download the [rails_emoji-1.1.gem](https://github.com/jsw0528/rails_emoji/raw/master/rails_emoji-1.1.gem), then `$ gem install ./rails_emoji-1.1.gem --no-ri --no-rdoc`.
 
 ## Usage
 
