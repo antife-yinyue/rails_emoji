@@ -9,14 +9,14 @@
 
 ## Installation
 
-* Add to your Gemfile: `gem 'rails_emoji', '~> 1.2'`, then: `$ bundle`.
+* Add to your Gemfile: `gem 'rails_emoji', '~> 1.3'`, then: `$ bundle`.
 
-* Or, download the [rails_emoji-1.2.gem](https://github.com/jsw0528/rails_emoji/raw/master/rails_emoji-1.2.gem), then `$ gem install ./rails_emoji-1.2.gem --no-ri --no-rdoc`.
+* Or, download the [rails_emoji-1.3.gem](https://github.com/jsw0528/rails_emoji/raw/master/rails_emoji-1.3.gem), then `$ gem install ./rails_emoji-1.3.gem --no-ri --no-rdoc`.
 
 ## Usage
 
 ```ruby
-":smile:".emoji_to_html
+":smile:".emojify
 # output: "<img src="/assets/emojis/smile.png" width="20" height="20" title=":smile:" alt=":smile:" class="emoji" />"
 
 RailsEmoji.render ":smile:", :host => "http://MrZhang.me", :size => 64, :class => "emoji-smile"

@@ -29,7 +29,7 @@ end
 # extend to String class
 class String
 
-  def emoji_to_html
+  def emojify
     RailsEmoji.render(self)
   end
 
