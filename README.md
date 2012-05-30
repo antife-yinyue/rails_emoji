@@ -1,12 +1,17 @@
 # [Emoji](http://www.emoji-cheat-sheet.com/) for Ruby on Rails
 
+![:kiss:](https://github.com/jsw0528/rails_emoji/raw/master/vendor/assets/images/emojis/kiss.png)
+![:dancer:](https://github.com/jsw0528/rails_emoji/raw/master/vendor/assets/images/emojis/dancer.png)
+![:octocat:](https://github.com/jsw0528/rails_emoji/raw/master/vendor/assets/images/emojis/octocat.png)
+![:trollface:](https://github.com/jsw0528/rails_emoji/raw/master/vendor/assets/images/emojis/trollface.png)
+
 ---
 
 ## Installation
 
-* Add to your Gemfile: `gem 'rails_emoji', '~> 1.1'`, then: `$ bundle`.
+* Add to your Gemfile: `gem 'rails_emoji', '~> 1.2'`, then: `$ bundle`.
 
-* Or, download the [rails_emoji-1.1.gem](https://github.com/jsw0528/rails_emoji/raw/master/rails_emoji-1.1.gem), then `$ gem install ./rails_emoji-1.1.gem --no-ri --no-rdoc`.
+* Or, download the [rails_emoji-1.2.gem](https://github.com/jsw0528/rails_emoji/raw/master/rails_emoji-1.2.gem), then `$ gem install ./rails_emoji-1.2.gem --no-ri --no-rdoc`.
 
 ## Usage
 

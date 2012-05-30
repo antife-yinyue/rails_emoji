@@ -13,9 +13,13 @@ module RailsEmoji
         emoji_code = emoji
         emoji = emoji_code.gsub(":", "")
 
-        %{<img src="#{ host }/assets/emojis/#{ emoji.gsub('+', 'plus') }.png" } +
-          %{width="#{ size }" height="#{ size }" } +
-          %{title="#{ emoji_code }" alt="#{ emoji_code }" class="#{ class_name }" />}
+        if RailsEmoji::EMOJI.include?(emoji)
+          %{<img src="#{ host }/assets/emojis/#{ emoji.gsub('+', 'plus') }.png" } +
+            %{width="#{ size }" height="#{ size }" } +
+            %{title="#{ emoji_code }" alt="#{ emoji_code }" class="#{ class_name }" />}
+        else
+          emoji_code
+        end
       end
     end
 
