@@ -14,7 +14,7 @@ module RailsEmoji
         emoji = emoji_code.gsub(":", "")
 
         if RailsEmoji::EMOJI.include?(emoji)
-          %{<img src="#{ host }/assets/emojis/#{ emoji.gsub('+', 'plus') }.png" } +
+          %{<img src="#{ host }/assets/emojis/#{ emoji }.png" } +
             %{width="#{ size }" height="#{ size }" } +
             %{title="#{ emoji_code }" alt="#{ emoji_code }" class="#{ class_name }" />}
         else
