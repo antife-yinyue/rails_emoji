@@ -1,4 +1,4 @@
-# Run in Firebug
+# Open [http://www.emoji-cheat-sheet.com/](http://www.emoji-cheat-sheet.com/) and run in Firebug
 
 ```javascript
 var s
