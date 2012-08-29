@@ -1,11 +1,15 @@
 # Open [http://www.emoji-cheat-sheet.com/](http://www.emoji-cheat-sheet.com/) and run in Firebug
 
 ```javascript
-var s
+var s, b
 $.each(['people', 'nature', 'objects', 'places', 'symbols'], function(i, id) {
   s = id + ':'
   $('#' + id).find('li').each(function() {
-    s = s + ' ' + $.trim($(this).text()).replace(/:/g, '')
+    b = $.trim($(this).text()).replace(/:/g, '')
+
+    if (!/^[\d]+$/.test(b)) {
+      s = s + ' ' + b
+    }
   })
   console.log(s)
 })
