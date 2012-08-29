@@ -9,9 +9,9 @@
 
 ## Installation
 
-* Add to your Gemfile: `gem 'rails_emoji', '~> 1.6.0'`, then: `$ bundle`.
+* Add to your Gemfile: `gem 'rails_emoji', '~> 1.6.1'`, then: `$ bundle`.
 
-* Or, download the [rails_emoji-1.6.0.gem](https://rubygems.org/downloads/rails_emoji-1.6.0.gem), then `$ gem install ./rails_emoji-1.6.0.gem --no-ri --no-rdoc`.
+* Or, download the [rails_emoji-1.6.1.gem](https://rubygems.org/downloads/rails_emoji-1.6.1.gem), then `$ gem install ./rails_emoji-1.6.1.gem --no-ri --no-rdoc`.
 
 ## Usage
 

@@ -4,14 +4,14 @@ module RailsEmoji
     def render(text, *args)
       options = args.extract_options!
 
-      host = options[:host] || ""
+      host = options[:host] || ''
       size = options[:size] || 20
-      class_name = options[:class] || "emoji"
+      class_name = options[:class] || 'emoji'
 
       # Replace
-      text.gsub(/:([a-z0-9_\-\+]+):/) do |emoji|
+      text.gsub(/:([a-z0-9_+-]+):/) do |emoji|
         emoji_code = emoji
-        emoji = emoji_code.gsub(":", "")
+        emoji = emoji_code.gsub(':', '')
 
         if RailsEmoji::EMOJI.include?(emoji)
           %{<img src="#{ host }/assets/emojis/#{ emoji }.png" } +
