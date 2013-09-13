@@ -1,25 +1,33 @@
 module RailsEmoji
   class << self
 
-    def render(text, *args)
-      options = args.extract_options!
+    def render(*args)
+      options = args.extract_options!.stringify_keys
+      host = options['host']
+      return if args[0].blank?
 
-      host = options[:host] || ''
-      size = options[:size] || 20
-      class_name = options[:class] || 'emoji'
-
-      # Replace
-      text.gsub(/:([a-z0-9_+-]+):/) do |emoji|
-        emoji_code = emoji
-        emoji = emoji_code.gsub(':', '')
-
-        if RailsEmoji::EMOJI.include?(emoji)
-          %{<img src="#{ host }/assets/emojis/#{ emoji }.png" } +
-            %{width="#{ size }" height="#{ size }" } +
-            %{title="#{ emoji_code }" alt="#{ emoji_code }" class="#{ class_name }" />}
+      if options.key? 'size'
+        if options['size'] =~ %r{\A\d+x\d+\z}
+          options['width'], options['height'] = options['size'].split('x')
         else
-          emoji_code
+          options['width'] = options['height'] = options['size']
         end
+      end
+
+      options.slice! 'class', 'width', 'height', 'title', 'alt'
+      options.reverse_merge! 'class' => 'emoji', 'width' => 20, 'height' => 20
+
+      # replace emoji code to image tag
+      args[0].gsub(/:([a-z0-9_+-]+):/) do |emoji|
+        return emoji unless RailsEmoji::EMOJI.include? emoji[1..-2]
+
+        attrs = options.reverse_merge(
+          'src' => "#{host}/assets/emojis/#{emoji[1..-2]}.png",
+          'alt' => emoji,
+          'title' => emoji
+        ).select{ |k, v| !v.blank? }.collect{ |k, v| %(#{k}="#{v}") }
+
+        %(<img #{attrs * ' '} />)
       end
     end
 

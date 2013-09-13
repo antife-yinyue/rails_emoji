@@ -9,18 +9,24 @@
 
 ## Installation
 
-* Add to your Gemfile: `gem 'rails_emoji', '~> 1.6.2'`, then: `$ bundle`.
+* Add to your Gemfile: `gem 'rails_emoji', '~> 1.7.0'`, then: `$ bundle`.
 
-* Or, download the [rails_emoji-1.6.2.gem](https://rubygems.org/downloads/rails_emoji-1.6.2.gem), then `$ gem install ./rails_emoji-1.6.2.gem --no-ri --no-rdoc`.
+* Or, download the [rails_emoji-1.7.0.gem](https://rubygems.org/downloads/rails_emoji-1.7.0.gem), then `$ gem install ./rails_emoji-1.7.0.gem --no-ri --no-rdoc`.
 
 ## Usage
 
 ```ruby
-":smile:".emojify
-# output: "<img src="/assets/emojis/smile.png" width="20" height="20" title=":smile:" alt=":smile:" class="emoji" />"
+':smile:'.emojify
+# <img src="/assets/emojis/smile.png" class="emoji" width="20" height="20" alt=":smile:" title=":smile:" />
 
-RailsEmoji.render ":smile:", :host => "http://MrZhang.me", :size => 64, :class => "emoji-smile"
-# output: "<img src="http://MrZhang.me/assets/emojis/smile.png" width="64" height="64" title=":smile:" alt=":smile:" class="emoji-smile" />"
+RailsEmoji.render ':smile:', size: '64x64', class: 'emoji-smile'
+# <img src="/assets/emojis/smile.png" class="emoji-smile" width="64" height="64" alt=":smile:" title=":smile:" />
+
+RailsEmoji.render ':smile:', size: nil, title: 'Smile!'
+# <img src="/assets/emojis/smile.png" class="emoji" alt=":smile:" title="Smile!" />
+
+RailsEmoji.render ':smile:', size: 32, host: 'http://MrZhang.me'
+# <img src="http://MrZhang.me/assets/emojis/smile.png" class="emoji" width="32" height="32" alt=":smile:" title=":smile:" />
 ```
 
 ## License
