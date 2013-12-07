@@ -3,7 +3,7 @@ module RailsEmoji
 
     def render(*args)
       options = args.extract_options!.stringify_keys
-      host = options['host']
+      host = options['host'] || RailsEmoji.host
       return if args[0].blank?
 
       if options.key? 'size'
