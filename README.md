@@ -1,4 +1,4 @@
-# [Emoji](http://www.emoji-cheat-sheet.com/) for Ruby on Rails
+# [Emoji](http://www.emoji-cheat-sheet.com/) for Ruby on Rails [![Gem Version](https://badge.fury.io/rb/rails_emoji.png)](http://badge.fury.io/rb/rails_emoji)
 
 ![:kiss:](https://github.com/jsw0528/rails_emoji/raw/master/vendor/assets/images/emojis/kiss.png)
 ![:dancer:](https://github.com/jsw0528/rails_emoji/raw/master/vendor/assets/images/emojis/dancer.png)
