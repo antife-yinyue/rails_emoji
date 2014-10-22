@@ -19,15 +19,13 @@ module RailsEmoji
 
       # replace emoji code to image tag
       args[0].gsub(/:([a-z0-9_+-]+):/) do |emoji|
-        return emoji unless RailsEmoji::EMOJI.include? emoji[1..-2]
-
         attrs = options.reverse_merge(
           'src' => "#{host}/assets/emojis/#{emoji[1..-2]}.png",
           'alt' => emoji,
           'title' => emoji
         ).select{ |k, v| !v.blank? }.collect{ |k, v| %(#{k}="#{v}") }
 
-        %(<img #{attrs * ' '} />)
+        replace = (RailsEmoji::EMOJI.include? emoji[1..-2]) ? "<img #{attrs * ' '} />" : emoji
       end
     end
 
