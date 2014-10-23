@@ -25,7 +25,7 @@ module RailsEmoji
           'title' => emoji
         ).select{ |k, v| !v.blank? }.collect{ |k, v| %(#{k}="#{v}") }
 
-        replace = (RailsEmoji::EMOJI.include? emoji[1..-2]) ? "<img #{attrs * ' '} />" : emoji
+        (RailsEmoji::EMOJI.include? emoji[1..-2]) ? "<img #{attrs * ' '} />" : emoji
       end
     end
 
