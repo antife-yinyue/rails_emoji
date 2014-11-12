@@ -1,4 +1,4 @@
-# Open [http://www.emoji-cheat-sheet.com/](http://www.emoji-cheat-sheet.com/) and run in Firebug
+# Open [http://www.emoji-cheat-sheet.com/](http://www.emoji-cheat-sheet.com/) and run in Console
 
 ```javascript
 var ids = ['people', 'nature', 'objects', 'places', 'symbols']
