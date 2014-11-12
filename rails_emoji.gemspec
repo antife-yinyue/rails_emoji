@@ -12,5 +12,5 @@ Gem::Specification.new do |s|
   s.homepage = 'https://github.com/jsw0528/rails_emoji'
   s.license  = 'MIT'
 
-  s.add_dependency 'rails', '>= 3.1.0'
+  s.add_runtime_dependency 'rails', '~> 3.1', '>= 3.1.0'
 end
